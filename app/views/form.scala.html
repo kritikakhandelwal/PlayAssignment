@@ -1,0 +1,12 @@
+@(users : Form[user.UserInfo])(implicit request:RequestHeader)
+@import helper._
+@main("welcome to kip"){
+<form action="@routes.HomeController.storeData()" method="POST" >
+    @CSRF.formField
+    <label>NAME<input type="text" name="fname"><br/></label>
+       <label> LNAME<input type="text" name="lname"><br/></label>
+       <label> EMAIL<input type="text" name="email"><br/></label>
+    <input type="submit" value="submit"><br/>
+
+</form>
+}

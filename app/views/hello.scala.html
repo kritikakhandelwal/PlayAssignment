@@ -1,0 +1,8 @@
+@()(implicit flash: Flash,request: RequestHeader)
+
+@flash.get("success").getOrElse("Welcome!")
+@main("User created page"){
+<p>@request.session.get("name")</p>
+<p>@request.session.get("age")</p>
+}
+
